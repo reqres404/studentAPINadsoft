@@ -1,0 +1,189 @@
+{
+    "info": {
+        "_postman_id": "ddcb06c3-7160-42bb-91db-6d113c442f2d",
+        "name": "NadsoftStudentAPI",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Students",
+            "item": [
+                {
+                    "name": "Create Student",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/students/",
+                            "path": [
+                                "students"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"student_id\": 8,\n  \"subject\": \"Math\",\n  \"score\": \"85\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Get Students (Pagination)",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:5000/students?page=1&limit=10",
+                            "query": [
+                                {
+                                    "key": "page",
+                                    "value": "1"
+                                },
+                                {
+                                    "key": "limit",
+                                    "value": "10"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "students"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Student",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:5000/students/8",
+                            "path": [
+                                "students",
+                                "8"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        }
+                    }
+                },
+                {
+                    "name": "Get Students Marks",
+                    "request": {
+                        "method": "GET"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Marks",
+            "item": [
+                {
+                    "name": "Create marks",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/marks",
+                            "path": [
+                                "marks"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"student_id\": 8,\n  \"subject\": \"History\",\n  \"score\": \"85\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Get Marks Paginated",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:5000/marks?page=1&limit=1",
+                            "query": [
+                                {
+                                    "key": "page",
+                                    "value": "1"
+                                },
+                                {
+                                    "key": "limit",
+                                    "value": "1"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "marks"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        }
+                    }
+                },
+                {
+                    "name": "Get marks",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:5000/marks/student/8",
+                            "path": [
+                                "marks",
+                                "student",
+                                "8"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Marks",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:5000/marks/1",
+                            "path": [
+                                "marks",
+                                "1"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
